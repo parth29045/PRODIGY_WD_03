@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+}
+
+#game {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #ff7e5f;
+    margin-bottom: 10px;
+}
+
+#status {
+    font-size: 1.2rem;
+    color: #ff7e5f;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.2s ease;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #ff7e5f;
+}
+
+.cell.X {
+    color: #ff7e5f;
+}
+
+.cell.O {
+    color: #feb47b;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7e5f; /* Soft pink background */
+    color: white;
+    border: 2px solid transparent; /* Invisible border to prevent resizing */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: border 0.3s ease; /* Smooth transition for the border */
+}
+
+button:hover {
+    border: 2px solid #feb47b; /* Adds a light border on hover */
+    box-shadow: 0 0 10px rgba(255, 191, 123, 0.6); /* Adds a soft glow effect */
+}
+
+button:active {
+    border: 2px solid #feb47b; /* Keeps the border when clicked */
+    box-shadow: 0 0 10px rgba(255, 191, 123, 0.6); /* Keeps the glow effect on click */
+}
